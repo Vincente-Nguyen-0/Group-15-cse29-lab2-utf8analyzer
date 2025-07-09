@@ -13,6 +13,20 @@ int ascii_check(char str[]) {
     return 1;
 }
 
+
+void Cap (char str[]){
+
+        int index = 0;
+        while(str[i] != '\0'){
+
+                if(str[index] >= 'a' && str[index] <= 'z')
+                        str[index] -=32;
+
+        }
+
+}
+
+
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "Usage: utf8analyzer \"<UTF-8 encoded string>\"\n");
