@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "Usage: utf8analyzer \"<UTF-8 encoded string>\"\n");
         return 1;
+	//cindy
     }
 
     // implement the UTF-8 analyzer here
