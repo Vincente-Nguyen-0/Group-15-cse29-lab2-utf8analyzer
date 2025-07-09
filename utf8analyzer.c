@@ -6,12 +6,23 @@
 
 int ascii_check(char str[]) {
     int i = 0;
-    while(str[i] != '\0') {
+    while(str[i] !='\0') {
         if((unsigned char) str[i] > 127) return 0;
         i++;
     }
     return 1;
 }
+
+void ascii_capitalize(char str[]) {
+	int i =0;
+	while(str[i] != '\0') {
+		if(str[i] >= 'a' && str[i] <= 'z') {
+			str[i] = str[i] - ('a' -'A');
+		}
+		i ++;
+	}
+}
+
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -24,4 +35,7 @@ int main(int argc, char *argv[]) {
 
     int ascii = ascii_check(input);
     printf("Valid ASCII: %s\n", ascii ? "true" : "false");
+
+    ascii_capitalize(input);
+    printf("Uppercasess ACSII: %s\n", input);
 }
